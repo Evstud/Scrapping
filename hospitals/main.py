@@ -111,7 +111,6 @@ def get_info(file_path):
             hosp_address = None
 
         try:
-            # hosp_site = soup.find(text=re.compile("Сайт|Официальный сайт|Компания в сети")).find("a").get("href")
             hosp_site = soup.find(class_="service-website-value").find("a").get("href")
         except Exception as _ex:
             hosp_site = None
